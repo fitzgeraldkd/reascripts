@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="fitzgeraldkd Scripts"/>
+<index version="1" name="fitzgeraldkd Scripts" commit="d63f05b33e16b2d638b2ea08fd489fb3e1d5209d">
+  <category name="Various">
+    <reapack name="fitzgeraldkd_Generate MIDI from Morse code.lua" type="script" desc="Generate MIDI from Morse code">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 This script is based on the International Morse Code Recommendation ITU-R M.1677-1 (10/2009). A trailing space (equivalent to the time of seven dots) is included at the end of the MIDI item to allow for clean looping.\par}
+}
+]]></description>
+        <link rel="website">https://github.com/fitzgeraldkd/reascripts</link>
+      </metadata>
+      <version name="1.00" author="fitzgeraldkd" time="2023-08-24T01:14:48Z">
+        <changelog><![CDATA[# v1.00 (2023-08-23)
+- Initial release]]></changelog>
+        <source main="main">https://github.com/fitzgeraldkd/reascripts/raw/d63f05b33e16b2d638b2ea08fd489fb3e1d5209d/Various/fitzgeraldkd_Generate%20MIDI%20from%20Morse%20code.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
