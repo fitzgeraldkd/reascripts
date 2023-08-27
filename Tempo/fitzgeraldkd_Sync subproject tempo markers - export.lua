@@ -23,7 +23,7 @@ local round_beatpos_to_int = true
 -- UTILS ----------
 -------------------
 
-function get_is_array(t)
+function is_array(t)
   local i = 0
   for _ in pairs(t) do
       i = i + 1
@@ -37,7 +37,7 @@ function get_tempo_time_sig_markers(project)
   local tempo_time_sig_markers = {}
   local i = 0
   while true do
-    exists, timepos, measurepos, beatpos, bpm, timesig_num, timesig_denom, linear_tempo = reaper.GetTempoTimeSigMarker(project, i)
+    local exists, timepos, measurepos, beatpos, bpm, timesig_num, timesig_denom, linear_tempo = reaper.GetTempoTimeSigMarker(project, i)
     if not exists then break end
     table.insert(tempo_time_sig_markers, {
       timepos=timepos,
@@ -94,8 +94,10 @@ function parse_table_to_yaml(data, prefix, skip_first_prefix)
 end
 
 
-function write_yaml_to_file(yaml)
-
+function write_yaml_to_file(filename, yaml)
+  local file = io.open(filename, 'w')
+  file:write(yaml)
+  file:close()
 end
 
 
@@ -104,10 +106,12 @@ end
 -------------------------
 
 reaper.ClearConsole()
-local project = reaper.EnumProjects(-1)
+local project, projectfn = reaper.EnumProjects(-1)
 local tempo_time_sig_markers = get_tempo_time_sig_markers(project)
 local data = {
   tempo_time_sig_markers=tempo_time_sig_markers,
 }
-local yaml = '---\n'..parse_table_to_yaml(data)
-write_yaml_to_file(yaml)
+-- TODO: Remove .RPP extension before appending suffix.
+local yaml = '---\n'..parse_table_to_yaml(data, '', false)
+local filename = projectfn..' - test.yaml'
+write_yaml_to_file(filename, yaml)
