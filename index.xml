@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="fitzgeraldkd Scripts" commit="d63f05b33e16b2d638b2ea08fd489fb3e1d5209d">
+<index version="1" name="fitzgeraldkd Scripts" commit="5144d2994e6ea88d403fd661d3173ac282705289">
   <category name="Various">
+    <reapack name="fitzgeraldkd_Export effect config.lua" type="script" desc="Export effect config">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 TODO: Populate\par}
+}
+]]></description>
+        <link rel="website">https://github.com/fitzgeraldkd/reascripts</link>
+      </metadata>
+      <version name="1.00" author="fitzgeraldkd" time="2025-05-05T00:10:15Z">
+        <changelog><![CDATA[# v1.00 (2025-05-05)
+- Initial release]]></changelog>
+        <source main="main">https://github.com/fitzgeraldkd/reascripts/raw/5144d2994e6ea88d403fd661d3173ac282705289/Various/fitzgeraldkd_Export%20effect%20config.lua</source>
+      </version>
+    </reapack>
     <reapack name="fitzgeraldkd_Generate MIDI from Morse code.lua" type="script" desc="Generate MIDI from Morse code">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
