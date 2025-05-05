@@ -3,7 +3,7 @@ on: [push]
 jobs:
   reapack-index:
     runs-on: ubuntu-latest
-    env:env:
+    env:
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
     - name: Fetch repository
