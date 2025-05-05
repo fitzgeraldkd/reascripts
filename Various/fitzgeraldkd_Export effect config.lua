@@ -1,7 +1,7 @@
 --[[
   ReaScript Name: Export effect config
   Author: fitzgeraldkd
-  Version: 1.00
+  Version: 0.01
   Link: https://github.com/fitzgeraldkd/reascripts
   About:
     TODO: Populate
