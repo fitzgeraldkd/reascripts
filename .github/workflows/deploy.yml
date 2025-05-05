@@ -1,8 +1,10 @@
 name: deploy
-on: [push, pull_request]
+on: [push]
 jobs:
   reapack-index:
     runs-on: ubuntu-latest
+    env:env:
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
     - name: Fetch repository
       uses: actions/checkout@v4
@@ -23,4 +25,4 @@ jobs:
     - name: Update index.xml
       run:  reapack-index --commit
     - name: Push changes
-      run:  git push
+      run:  git push origin HEAD:${{ env.BRANCH_NAME }}
