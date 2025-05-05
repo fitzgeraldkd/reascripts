@@ -21,8 +21,8 @@ end
 function get_project_config(project)
     local config = ''
 
-    config += "test\n"
-    config += "foo\n"
+    config = config + "test\n"
+    config = config + "foo\n"
 
     return config
 end
